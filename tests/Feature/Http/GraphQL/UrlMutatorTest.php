@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
 use Faker\Factory;
 
-class ProductControllerTest extends TestCase
+class UrlMutatorTest extends TestCase
 {
     use DatabaseMigrations;
 
