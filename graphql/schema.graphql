@@ -19,3 +19,21 @@ type User {
     created_at: DateTime!
     updated_at: DateTime!
 }
+
+input UrlInput {
+  link: String!
+  short: String
+}
+
+type Url {
+    id: ID!
+    link: String!
+    shortlink: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Mutation {
+  createUrl(input: UrlInput!): Url
+    @field(resolver: "UrlMutator@create")
+}
