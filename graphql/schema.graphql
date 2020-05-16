@@ -8,21 +8,8 @@ scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date
 scalar DateTimeTz @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTimeTz")
 
 type Query {
-    users: [User!]! @paginate(defaultCount: 10)
-    user(id: ID @eq): User @find
-}
-
-type User {
-    id: ID!
-    name: String!
-    email: String!
-    created_at: DateTime!
-    updated_at: DateTime!
-}
-
-input UrlInput {
-  link: String!
-  short: String
+    urls: [Url!]! @paginate(defaultCount: 10)
+    url(id: ID @eq): Url @find
 }
 
 type Url {
@@ -31,6 +18,11 @@ type Url {
     shortlink: String!
     created_at: DateTime!
     updated_at: DateTime!
+}
+
+input UrlInput {
+  link: String!
+  short: String
 }
 
 type Mutation {
