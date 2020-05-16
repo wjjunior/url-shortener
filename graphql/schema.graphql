@@ -36,4 +36,9 @@ type Url {
 type Mutation {
   createUrl(input: UrlInput!): Url
     @field(resolver: "UrlMutator@create")
+    @broadcast(subscription: "urlCreated")
+}
+
+type Subscription {
+  urlCreated: Url
 }
