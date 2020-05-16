@@ -1,6 +1,5 @@
-version: '3'
+version: "3"
 services:
-
   #PHP Service
   app:
     build:
@@ -51,6 +50,17 @@ services:
     volumes:
       - dbdata:/var/lib/mysql
       - ./mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - app-network
+
+  #MySQL Test Service
+  testdb:
+    image: mysql:5.7.22
+    restart: unless-stopped
+    tty: true
+    environment:
+      MYSQL_DATABASE: url_shortener_test
+      MYSQL_ROOT_PASSWORD: 265UB0wC0fkgbVVV
     networks:
       - app-network
 
