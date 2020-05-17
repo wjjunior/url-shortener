@@ -28,9 +28,9 @@ class UrlMutator
      * @param  null  $rootValue
      * @param  mixed[]  $args
      * @param  \Nuwave\Lighthouse\Support\Contracts\GraphQLContext  $context 
-     * @return mixed
+     * @return App\Url
      */
-    public function create($rootValue, array $args, GraphQLContext $context)
+    public function create($rootValue, array $args, GraphQLContext $context): Url
     {
         $shortLink = isset($args["input"]["short"]) ? $this->generateShortlink($args["input"]["short"]) : $this->generateShortlink();
         $url = Url::create([
