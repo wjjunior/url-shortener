@@ -21,7 +21,7 @@ class UrlMutatorTest extends TestCase
 
 
         $response = $this->graphQL(
-            /** @lang GraphQL */
+        /** @lang GraphQL */
             '
             mutation CreateUrl($input: UrlInput!) {
                 createUrl(input: $input) {
@@ -62,7 +62,7 @@ class UrlMutatorTest extends TestCase
 
 
         $response = $this->graphQL(
-            /** @lang GraphQL */
+        /** @lang GraphQL */
             '
             mutation CreateUrl($input: UrlInput!) {
                 createUrl(input: $input) {
