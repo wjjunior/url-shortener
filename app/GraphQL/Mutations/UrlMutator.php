@@ -23,7 +23,7 @@ class UrlMutator
     }
 
     /**
-     * Return a value for the field.
+     * Returns the newly created shortlink
      *
      * @param  null  $rootValue
      * @param  mixed[]  $args
@@ -42,7 +42,7 @@ class UrlMutator
     }
 
     /**
-     * Return an array of the created shortlink data
+     * Generate a unique shortlink
      * 
      * @param String $short
      * @return String

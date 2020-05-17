@@ -9,6 +9,12 @@ use Illuminate\View\View;
 
 class UrlController extends Controller
 {
+    /**
+     * Returns a view to redirect the user to the right shortlink URL
+     *
+     * @param  String  $shortlink
+     * @return mixed
+     */
     public function redirectUrl(String $shortlink): View
     {
         $url = Url::where("shortlink", "like", "%$shortlink")->first();
