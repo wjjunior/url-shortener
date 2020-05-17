@@ -13,7 +13,7 @@ class UrlController extends Controller
      * Returns a view to redirect the user to the right shortlink URL
      *
      * @param  String  $shortlink
-     * @return mixed
+     * @return Illuminate\View\View;
      */
     public function redirectUrl(String $shortlink): View
     {
